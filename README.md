@@ -1,8 +1,11 @@
-# React + Vite
+# Jamming - Spotify Playlist Creator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Jamming is a React web application that allows users to search for songs on Spotify, create custom playlists by adding or removing tracks, and save the playlists directly to their Spotify account.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Search Spotify for tracks by artist, song title, or album.
+- Add tracks to a custom playlist.
+- Remove tracks from the playlist.
+- Save the created playlist to your Spotify account.
+- Seamless Spotify API integration using OAuth authentication.
