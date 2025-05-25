@@ -1,0 +1,34 @@
+.resultsDiv {
+  background-color: rgba(20, 4, 80, 0.7);
+  border-right: 7px solid rgba(0, 0, 0, 0.6);
+  border-left: 7px solid rgba(0, 0, 0, 0.6);
+  width: 500px;
+  color: white;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.filterDiv {
+  border-bottom: 1px solid grey;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.buttonAdd {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 28px;
+  margin: 40px 0;
+  border-bottom: 1px solid grey;
+}
+
+.filterDiv button:hover {
+  background: none;
+  color: rgb(161, 161, 161);
+}

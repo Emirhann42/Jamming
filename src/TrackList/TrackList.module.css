@@ -1,0 +1,18 @@
+.tracklistDiv {
+  border-bottom: 1px solid grey;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.buttonRemove {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+}
+
+.tracklistDiv button:hover {
+  background: none;
+  color: rgb(161, 161, 161);
+}
