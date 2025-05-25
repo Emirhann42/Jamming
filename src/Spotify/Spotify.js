@@ -1,6 +1,5 @@
 const clientId = "fa5c59f0c6414137aef546d6f6a694f9";
 const redirectUri = "http://localhost:5173/";
-const userId = "tfhzduofz9xll1wd7xe1sjcv1";
 let accessToken;
 
 const Spotify = {
@@ -54,6 +53,23 @@ const Spotify = {
 
   async createPlaylist(playlistName) {
     const accessToken = this.getAccessToken();
+    const userResponse = await fetch("https://api.spotify.com/v1/me", {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
+
+    if (!userResponse.ok) {
+      const errorData = await userResponse.json();
+      throw new Error(
+        `Error getting user ID: ${
+          errorData.error?.message || userResponse.statusText
+        }`
+      );
+    }
+
+    const userData = await userResponse.json();
+    const userId = userData.id;
     const requestData = {
       method: "POST",
       headers: {
