@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Playlist from "../Playlist/Playlist.jsx";
 import SearchResults from "../SearchResults/SearchResults.jsx";
 import styles from "./App.module.css";
 import SearchBar from "../SearchBar/SearchBar.jsx";
 import Spotify from "../Spotify/Spotify.js";
 
+
 function App() {
   const [playlist, setPlaylist] = useState([]);
   const [results, setResults] = useState([]);
 
+  useEffect(() => {
+    Spotify.getAccessToken();
+  }, []);
   const handleAddTrack = (track) => {
     if (!playlist.some((t) => t.id === track.id)) {
       setPlaylist([...playlist, track]);
