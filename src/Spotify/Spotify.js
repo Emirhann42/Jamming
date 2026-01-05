@@ -1,5 +1,5 @@
-const clientId = "fa5c59f0c6414137aef546d6f6a694f9";
-const redirectUri = "http://127.0.0.1:5173/";
+const clientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
+const redirectUri = import.meta.env.VITE_REDIRECT_URI;
 const scope = "playlist-modify-private playlist-modify-public";
 
 let accessToken = null;
